@@ -5,7 +5,7 @@ Heavily based on an excellent writeup from Rayhan Ahmed: [Automating Blind SQL i
 
 ## Example
 ```
-sqlmap-websocket-proxy -u ws://sketchyurl.htb:8081 -p '{"uid_of_somne_sort": "%param%"}' --json
+sqlmap-websocket-proxy -u ws://sketchyurl.htb:8081 -p '{"uid_of_some_sort": "%param%"}' --json
 python3 sqlmap.py -u  http://localhost:8080/?param1=1
 ```
 ## Usage
@@ -14,9 +14,9 @@ usage: sqlmap-websocket-proxy [-h] -u URL -p PAYLOAD [-o PORT] [--json]
 
 options:
   -h, --help            show this help message and exit
-  -u URL, --url URL     URL to the websocket (example: soc-player.soccer.htb:9091)
+  -u URL, --url URL     URL to the websocket
   -p PAYLOAD, --payload PAYLOAD
-                        String with params for the playload encoded as %param% (example: {"id": "%param%"})
+                        String with params for the playload encoded as %param% (example: {"uid_of_some_sort": "%param%"})
   -o PORT, --port PORT  Proxy Port (default: 8080)
   --json                Escape text for JSON payloads
 ```
