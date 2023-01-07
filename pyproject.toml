@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlmap-websocket-proxy"
+version = "1.0.0"
+authors = [
+  { name="Brandon Kreisel", email="BKreisel@users.noreply.github.com" },
+]
+description = "HTTP Proxy for using sqlmap against websockets"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "websocket-client",
+    "rich",
+]
+
+[project.scripts]
+sqlmap-websocket-proxy = "sqlmap_websocket_proxy.main:cli"
+
+[project.urls]
+"Homepage" = "https://github.com/BKreisel/sqlmap-websocket-proxy"
+"Bug Tracker" = "https://github.com/BKreisel/sqlmap-websocket-proxy/issues"
