@@ -6,6 +6,7 @@ Heavily based on an excellent writeup from Rayhan Ahmed: [Automating Blind SQL i
 ## Example
 ```
 sqlmap-websocket-proxy -u soc-player.soccer.htb:9091 -p '{"id": "%param%"}' --json
+python3 sqlmap.py -u  http://localhost:8080/?param1=1
 ```
 ## Usage
 ```bash
