@@ -70,7 +70,7 @@ def send_inject(
     params = [x for _, x in parse_qsl(path)]
 
     if json_encode:
-        params = [unquote(x).replace('"',"'") for x in params]
+        params = [json.dumps(unquote(x))[1:-1] for x in params]
 
     for x in params:
         data = data.replace("%param%", x, 1)

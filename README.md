@@ -3,6 +3,11 @@
 
 Heavily based on an excellent writeup from Rayhan Ahmed: [Automating Blind SQL injection over WebSocket](https://rayhan0x01.github.io/ctf/2021/04/02/blind-sqli-over-websocket-automation.html)
 
+## Fork Changes
+- Proper JSON Encoding
+  - before: " was replaced with ', leading to problems with payloads
+  - now: using json.dumps to escape "
+
 ## Example
 ```
 sqlmap-websocket-proxy -u ws://sketcy.lol:1337 -p '{"id": "%param%"}'
